@@ -35,17 +35,22 @@ Plataforma de dados da Vende+ (empresa fictícia) orquestrada com **Apache Airfl
 - Templates Jinja, como `{{ var.value.vendas_dir_input }}` e `{{ ds }}`.
 
 **Monitoramento e alertas**
-- Callback `notificar_falha` (`helpers/callbacks.py`), usado como `on_failure_callback`: quando uma task falha, envia um e-mail com a DAG, a task, a data da execução e o erro.
+- Callback `notificar_falha` (`helpers/callbacks.py`), ligado como `on_failure_callback` no `pipeline_vendas_v3`: quando uma task falha, envia um e-mail com a DAG, a task, a data da execução e o erro.
 - O envio usa a Connection SMTP e o destinatário vem da Variable `email_alertas`.
 - Se o e-mail falhar, o erro é apenas registrado no log, para não mascarar a falha original da task.
 
 **Boas práticas**
-- Idempotência: usar a data da execução, sobrescrever em vez de acrescentar, nomear saídas pela data.
-- Ambientes de dev e prod separados, com o mesmo código e configurações diferentes.
-- Assets, para disparar DAGs quando um dado é atualizado.
+- Idempotência no pipeline de vendas: usa a data da execução, sobrescreve em vez de acrescentar e nomeia as saídas pela data.
 
 **Fluxo de trabalho com IA**
 - `CLAUDE.md` com os padrões do projeto e skills do Claude Code para gerar spec a partir de contexto, gerar DAG a partir de spec, revisar DAG, explicar erro e gerar dados de teste.
+
+## Conceitos estudados no curso
+
+Vistos no curso, mas não implementados neste repositório:
+
+- **Ambientes de dev e prod separados:** duas instalações independentes do Airflow, com o mesmo código e Variables e Connections de mesmo nome e valores diferentes.
+- **Assets:** disparar uma DAG quando um dado é atualizado por outra, em vez de depender só de horário.
 
 ## Estrutura do projeto
 
@@ -54,8 +59,9 @@ Plataforma de dados da Vende+ (empresa fictícia) orquestrada com **Apache Airfl
 ├── CLAUDE.md                # Padrões do projeto para a IA
 ├── docker-compose.yaml      # Ambiente Airflow local
 ├── dags/
-│   ├── pipeline_vendas.py       # Versão 1: dados passados entre tasks via XCom
+│   ├── pipeline_vendas.py       # Versão 1: primeira versão de estudo
 │   ├── pipeline_vendas_v2.py    # Versão 2: sensor, agendamento, Variables e data da execução
+│   ├── pipeline_vendas_v3.py    # Versão 3 (final): v2 + alerta de falha por e-mail
 │   └── pipeline_cotacao.py
 ├── helpers/                 # Funções de negócio
 │   ├── vendas.py
@@ -74,6 +80,18 @@ Plataforma de dados da Vende+ (empresa fictícia) orquestrada com **Apache Airfl
 └── scripts/
     └── gerar_dados.py       # Geração de dados de teste
 ```
+
+### As três versões do pipeline de vendas
+
+O pipeline de vendas foi mantido em três arquivos para mostrar a evolução ao longo do curso:
+
+| Versão | O que mostra |
+|---|---|
+| `pipeline_vendas` (v1) | Primeira versão de estudo: caminhos fixos no código e dados passados entre as tasks por retorno e parâmetro (XCom). Mantida como histórico, fora do fluxo de execução: lê um `vendas.csv` de nome fixo, que o script de dados não gera. |
+| `pipeline_vendas_v2` | Sensor de arquivo, agendamento diário, Variables e arquivos nomeados pela data da execução. |
+| `pipeline_vendas_v3` | Versão final: a v2 com o alerta de falha por e-mail. |
+
+A v2 e a v3 têm o mesmo agendamento e gravam nos mesmos arquivos, então basta manter uma das duas ativa.
 
 ## Como rodar
 
@@ -119,6 +137,13 @@ python scripts/gerar_dados.py
 Gera os CSVs de vendas dos últimos 3 dias em `data/input/`.
 
 **6. Ativar e disparar as DAGs** na interface. Na busca, procure por `pipeline`.
+
+**7. (Opcional) Configurar o alerta de falha** do `pipeline_vendas_v3`. O envio depende de um servidor de e-mail; sem estes cadastros a DAG roda normalmente, apenas não envia o alerta.
+
+| Tipo | Nome | Valor |
+|---|---|---|
+| Variable | `email_alertas` | e-mail que recebe os alertas |
+| Connection | `smtp_default` (tipo SMTP) | host, porta, login e senha do seu servidor de e-mail |
 
 ## Configuração de imports
 
