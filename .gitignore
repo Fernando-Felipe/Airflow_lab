@@ -1,0 +1,7 @@
+.env
+config/airflow.cfg
+logs/
+data/
+__pycache__/
+*.pyc
+*Zone.Identifier
