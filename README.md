@@ -9,6 +9,29 @@ Plataforma de dados da Vende+ (empresa fictícia) orquestrada com **Apache Airfl
 | **Vendas** | Espera o CSV de pedidos do dia, valida, agrupa por categoria e grava o resumo em `data/output` |
 | **Cotação** | Busca a cotação USD-BRL na AwesomeAPI, salva o JSON bruto e consolida um histórico de 7 dias |
 
+### Exemplo de entrada e saída
+
+A pasta [docs/exemplos](docs/exemplos) traz uma execução real do pipeline de vendas.
+
+**Entrada** (`vendas_2026-10-12.csv`, 80 pedidos):
+
+| data | pedido_id | produto | categoria | quantidade | valor_unitario |
+|---|---|---|---|---|---|
+| 2026-10-12 | PED-20261012-0001 | Bola de futebol | Esporte e Lazer | 3 | 80.0 |
+| 2026-10-12 | PED-20261012-0002 | Teclado mecânico | Eletrônicos | 3 | 459.23 |
+| 2026-10-12 | PED-20261012-0003 | Carregador USB-C | Eletrônicos | 1 | 56.73 |
+| ... | | | | | |
+
+**Saída** (`resumo_categoria_2026-10-12.csv`):
+
+| categoria | total_pedidos | valor_total_brl | ticket_medio_brl |
+|---|---|---|---|
+| Beleza | 16 | 2423.19 | 151.45 |
+| Casa e Decoração | 19 | 5990.42 | 315.29 |
+| Eletrônicos | 20 | 6540.41 | 327.02 |
+| Esporte e Lazer | 10 | 10900.46 | 1090.05 |
+| Vestuário | 15 | 2612.02 | 174.13 |
+
 ## O que o projeto aborda
 
 **Ambiente**
@@ -76,6 +99,7 @@ Vistos no curso, mas não implementados neste repositório:
 │       └── consolidated/
 ├── docs/
 │   ├── contexto/            # Documentos de origem (e-mails, histórias)
+│   ├── exemplos/            # Exemplo de entrada e saída do pipeline de vendas
 │   └── specs/               # Especificações técnicas validadas
 └── scripts/
     └── gerar_dados.py       # Geração de dados de teste

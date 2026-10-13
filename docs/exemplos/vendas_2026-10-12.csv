@@ -1,0 +1,81 @@
+data,pedido_id,produto,categoria,quantidade,valor_unitario
+2026-10-12,PED-20261012-0001,Bola de futebol,Esporte e Lazer,3,80.0
+2026-10-12,PED-20261012-0002,Teclado mecânico,Eletrônicos,3,459.23
+2026-10-12,PED-20261012-0003,Carregador USB-C,Eletrônicos,1,56.73
+2026-10-12,PED-20261012-0004,Protetor solar FPS50,Beleza,1,106.34
+2026-10-12,PED-20261012-0005,Jaqueta corta-vento,Vestuário,1,235.45
+2026-10-12,PED-20261012-0006,Cabo HDMI 2m,Eletrônicos,3,47.75
+2026-10-12,PED-20261012-0007,Halter 5kg par,Esporte e Lazer,1,176.1
+2026-10-12,PED-20261012-0008,Fone Bluetooth,Eletrônicos,1,245.68
+2026-10-12,PED-20261012-0009,Camiseta básica,Vestuário,1,41.26
+2026-10-12,PED-20261012-0010,Calça jeans,Vestuário,1,193.91
+2026-10-12,PED-20261012-0011,Tapete sala,Casa e Decoração,1,560.29
+2026-10-12,PED-20261012-0012,Meia esportiva,Vestuário,1,27.91
+2026-10-12,PED-20261012-0013,Camiseta básica,Vestuário,1,47.64
+2026-10-12,PED-20261012-0014,Fone Bluetooth,Eletrônicos,1,252.85
+2026-10-12,PED-20261012-0015,Garrafa térmica 1L,Esporte e Lazer,1,94.76
+2026-10-12,PED-20261012-0016,Tapete sala,Casa e Decoração,1,276.27
+2026-10-12,PED-20261012-0017,Mouse sem fio,Eletrônicos,1,125.61
+2026-10-12,PED-20261012-0018,Cabo HDMI 2m,Eletrônicos,3,59.34
+2026-10-12,PED-20261012-0019,Quadro decorativo,Casa e Decoração,1,130.86
+2026-10-12,PED-20261012-0020,Almofada decorativa,Casa e Decoração,3,61.77
+2026-10-12,PED-20261012-0021,Hidratante facial,Beleza,1,86.39
+2026-10-12,PED-20261012-0022,Fone Bluetooth,Eletrônicos,1,213.54
+2026-10-12,PED-20261012-0023,Tapete sala,Casa e Decoração,4,398.66
+2026-10-12,PED-20261012-0024,Luminária mesa,Casa e Decoração,2,114.05
+2026-10-12,PED-20261012-0025,Luminária mesa,Casa e Decoração,2,171.96
+2026-10-12,PED-20261012-0026,Corda de pular,Esporte e Lazer,1,58.84
+2026-10-12,PED-20261012-0027,Luminária mesa,Casa e Decoração,1,90.59
+2026-10-12,PED-20261012-0028,Teclado mecânico,Eletrônicos,1,430.93
+2026-10-12,PED-20261012-0029,Batom matte,Beleza,3,49.64
+2026-10-12,PED-20261012-0030,Bicicleta ergométrica,Esporte e Lazer,3,1370.57
+2026-10-12,PED-20261012-0031,Jaqueta corta-vento,Vestuário,4,208.02
+2026-10-12,PED-20261012-0032,Vela aromática,Casa e Decoração,4,29.16
+2026-10-12,PED-20261012-0033,Tapete sala,Casa e Decoração,1,597.35
+2026-10-12,PED-20261012-0034,Batom matte,Beleza,1,51.92
+2026-10-12,PED-20261012-0035,Fone Bluetooth,Eletrônicos,1,200.37
+2026-10-12,PED-20261012-0036,Teclado mecânico,Eletrônicos,1,481.1
+2026-10-12,PED-20261012-0037,Meia esportiva,Vestuário,1,20.58
+2026-10-12,PED-20261012-0038,Perfume importado,Beleza,2,376.69
+2026-10-12,PED-20261012-0039,Cabo HDMI 2m,Eletrônicos,1,30.39
+2026-10-12,PED-20261012-0040,Batom matte,Beleza,2,69.18
+2026-10-12,PED-20261012-0041,Meia esportiva,Vestuário,1,26.62
+2026-10-12,PED-20261012-0042,Luminária mesa,Casa e Decoração,3,93.52
+2026-10-12,PED-20261012-0043,Cabo HDMI 2m,Eletrônicos,1,42.73
+2026-10-12,PED-20261012-0044,Vela aromática,Casa e Decoração,2,45.29
+2026-10-12,PED-20261012-0045,Tênis casual,Vestuário,1,348.81
+2026-10-12,PED-20261012-0046,Tênis casual,Vestuário,1,234.2
+2026-10-12,PED-20261012-0047,Fone Bluetooth,Eletrônicos,1,270.92
+2026-10-12,PED-20261012-0048,Quadro decorativo,Casa e Decoração,2,156.12
+2026-10-12,PED-20261012-0049,Protetor solar FPS50,Beleza,1,100.18
+2026-10-12,PED-20261012-0050,Teclado mecânico,Eletrônicos,3,397.99
+2026-10-12,PED-20261012-0051,Bicicleta ergométrica,Esporte e Lazer,3,1453.21
+2026-10-12,PED-20261012-0052,Quadro decorativo,Casa e Decoração,2,156.31
+2026-10-12,PED-20261012-0053,Bicicleta ergométrica,Esporte e Lazer,1,1021.67
+2026-10-12,PED-20261012-0054,Halter 5kg par,Esporte e Lazer,2,195.47
+2026-10-12,PED-20261012-0055,Meia esportiva,Vestuário,1,30.21
+2026-10-12,PED-20261012-0056,Tapete sala,Casa e Decoração,1,558.33
+2026-10-12,PED-20261012-0057,Cabo HDMI 2m,Eletrônicos,2,41.73
+2026-10-12,PED-20261012-0058,Fone Bluetooth,Eletrônicos,2,232.92
+2026-10-12,PED-20261012-0059,Calça jeans,Vestuário,1,131.07
+2026-10-12,PED-20261012-0060,Shampoo 400ml,Beleza,1,49.19
+2026-10-12,PED-20261012-0061,Meia esportiva,Vestuário,1,33.21
+2026-10-12,PED-20261012-0062,Luminária mesa,Casa e Decoração,1,139.95
+2026-10-12,PED-20261012-0063,Protetor solar FPS50,Beleza,1,105.88
+2026-10-12,PED-20261012-0064,Protetor solar FPS50,Beleza,1,79.66
+2026-10-12,PED-20261012-0065,Vela aromática,Casa e Decoração,2,39.92
+2026-10-12,PED-20261012-0066,Bola de futebol,Esporte e Lazer,2,146.94
+2026-10-12,PED-20261012-0067,Hidratante facial,Beleza,2,68.64
+2026-10-12,PED-20261012-0068,Shampoo 400ml,Beleza,1,59.24
+2026-10-12,PED-20261012-0069,Protetor solar FPS50,Beleza,1,96.09
+2026-10-12,PED-20261012-0070,Shampoo 400ml,Beleza,5,44.9
+2026-10-12,PED-20261012-0071,Cabo HDMI 2m,Eletrônicos,3,35.11
+2026-10-12,PED-20261012-0072,Hidratante facial,Beleza,1,78.9
+2026-10-12,PED-20261012-0073,Fone Bluetooth,Eletrônicos,2,283.36
+2026-10-12,PED-20261012-0074,Meia esportiva,Vestuário,3,36.25
+2026-10-12,PED-20261012-0075,Vela aromática,Casa e Decoração,1,49.6
+2026-10-12,PED-20261012-0076,Shampoo 400ml,Beleza,4,51.74
+2026-10-12,PED-20261012-0077,Calça jeans,Vestuário,2,150.16
+2026-10-12,PED-20261012-0078,Carregador USB-C,Eletrônicos,1,75.28
+2026-10-12,PED-20261012-0079,Vela aromática,Casa e Decoração,1,42.73
+2026-10-12,PED-20261012-0080,Halter 5kg par,Esporte e Lazer,1,152.93
